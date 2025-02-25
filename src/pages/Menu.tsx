@@ -1,4 +1,4 @@
-import HeroSection from "@/components/menu/herosection"
+import HeroSection from "@/components/menu/HeroSection"
 import ServicesSection from "@/components/menu/ServicesSection"
 
 
