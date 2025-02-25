@@ -1,22 +1,45 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import shirdhara from "../../assets/Images/Services/Shirodhara.png";
+import hotstone from "../../assets/Images/Services/hot_stone_massage_1024x1024.png";
+import trekker from "../../assets/Images/Services/trekker-healer-massage-3.png";
+import thaiMassage from "../../assets/Images/Services/thai massage.avif";
+import deepMassage from "../../assets/Images/Services/deep-tissue-massage-on-back.png";
+import ayurvedic from "../../assets/Images/Services/abhyanga-–ayurvedic-body-massage-1.png";
+import aromaMassage from "../../assets/Images/Services/aromaMassage.png";
+import swedishMassage from "../../assets/Images/Services/swedish.png";
+import bodyscrub from "../../assets/Images/Services/bodyscrub.png";
+import footReflexalogy from "../../assets/Images/Services/FootReflexology.png";
+import headNeck from "../../assets/Images/Services/headNackAndShoulder-massage.png";
+import spinalBack from "../../assets/Images/Services/SpineDocsMassagetherapyrelievesbackpain.png";
+import FACIAL from "../../assets/Images/Services/faclal.png";
+import WAXING from "../../assets/Images/Services/Berkhamsted-Beauty-Salon-How-to-Prepare-for-Your-First-Waxing-Appointment-in-a-While-Blog.png";
+import THREADING from "../../assets/Images/Services/eyebrow-threading.png";
+import MANICURE from "../../assets/Images/Services/Manicure-Pedicure.png";
+import HENNA from "../../assets/Images/Services/HeenaArts.png";
+import HAIRWORKS from "../../assets/Images/Services/woman-washing-head-hairsalon.png";
 
 interface ServicePrice {
-  duration: string
-  price: string
+  duration: string;
+  price: string;
 }
 
 interface Service {
-  name: string
-  image: string
-  prices: ServicePrice[]
-  description: string
+  name: string;
+  image: string;
+  prices: ServicePrice[];
+  description: string;
 }
 
 const services: Service[] = [
   {
     name: "SHIRODHARA TREATMENT",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: shirdhara,
     prices: [
       { duration: "60 min", price: "Rs.6000/-" },
       { duration: "90 min", price: "Rs.8000/-" },
@@ -27,8 +50,7 @@ const services: Service[] = [
   },
   {
     name: "HOT STONE MASSAGE",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: hotstone,
     prices: [
       { duration: "60 min", price: "Rs.5000/-" },
       { duration: "90min", price: "Rs.7000/-" },
@@ -39,8 +61,7 @@ const services: Service[] = [
   },
   {
     name: "TREKKERS MASSAGE",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: trekker,
     prices: [
       { duration: "60 min", price: "Rs.5000/-" },
       { duration: "90min", price: "Rs.7000/-" },
@@ -51,8 +72,7 @@ const services: Service[] = [
   },
   {
     name: "THAI MASSAGE",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: thaiMassage,
     prices: [
       { duration: "45 min", price: "Rs.4000/-" },
       { duration: "90min", price: "Rs.7000/-" },
@@ -63,19 +83,18 @@ const services: Service[] = [
   },
   {
     name: "DEEP TISSUE MASSAGE",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: deepMassage,
     prices: [
       { duration: "45 min", price: "Rs.4500/-" },
       { duration: "90min", price: "Rs.6000/-" },
       { duration: "120min", price: "Rs.7500/-" },
     ],
-    description: "Intense pressure massage targeting deeper muscle layers to release chronic muscle tension and knots.",
+    description:
+      "Intense pressure massage targeting deeper muscle layers to release chronic muscle tension and knots.",
   },
   {
     name: "AYURVEDIC MASSAGE",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: ayurvedic,
     prices: [
       { duration: "60 min", price: "Rs.5000/-" },
       { duration: "90min", price: "Rs.6500/-" },
@@ -86,8 +105,7 @@ const services: Service[] = [
   },
   {
     name: "AROMA MASSAGE",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: aromaMassage,
     prices: [
       { duration: "60 min", price: "Rs.4000/-" },
       { duration: "90min", price: "Rs.6000/-" },
@@ -98,8 +116,7 @@ const services: Service[] = [
   },
   {
     name: "SWEDISH MASSAGE",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: swedishMassage,
     prices: [
       { duration: "60 min", price: "Rs.5000/-" },
       { duration: "90min", price: "Rs.6500/-" },
@@ -110,18 +127,17 @@ const services: Service[] = [
   },
   {
     name: "BODY SCRUB",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: bodyscrub,
     prices: [
       { duration: "45 min", price: "Rs.3000/-" },
       { duration: "60min", price: "Rs.3500/-" },
     ],
-    description: "Body spa treatment using natural scrub which helps to reveal young healthy looking skin.",
+    description:
+      "Body spa treatment using natural scrub which helps to reveal young healthy looking skin.",
   },
   {
     name: "FOOT REFLEXOLOGY",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: footReflexalogy,
     prices: [
       { duration: "30 min", price: "Rs.1500/-" },
       { duration: "45min", price: "Rs.2500/-" },
@@ -132,19 +148,18 @@ const services: Service[] = [
   },
   {
     name: "HEAD, NECK & SHOULDER",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: headNeck,
     prices: [
       { duration: "30 min", price: "Rs.1800/-" },
       { duration: "45min", price: "Rs.2500/-" },
       { duration: "60min", price: "Rs.3500/-" },
     ],
-    description: "Express treatment to target tense areas around head, neck and shoulders through gentle manipulation.",
+    description:
+      "Express treatment to target tense areas around head, neck and shoulders through gentle manipulation.",
   },
   {
     name: "SPINAL BACK MASSAGE",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: spinalBack,
     prices: [
       { duration: "25 min", price: "Rs.1800/-" },
       { duration: "45min", price: "Rs.2500/-" },
@@ -155,20 +170,19 @@ const services: Service[] = [
   },
   {
     name: "FACIAL",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: FACIAL,
     prices: [
       { duration: "Face Cleansing", price: "Rs.1000/-" },
       { duration: "Face Clean Up", price: "Rs.1500/-" },
       { duration: "Whitening Facial", price: "Rs.2000/-" },
       { duration: "Normal Gold Facial", price: "Rs.2500/-" },
     ],
-    description: "Various facial treatments to cleanse, exfoliate and nourish the skin.",
+    description:
+      "Various facial treatments to cleanse, exfoliate and nourish the skin.",
   },
   {
     name: "WAXING",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: WAXING,
     prices: [
       { duration: "Full Arms", price: "Rs.800/-" },
       { duration: "Half Arms", price: "Rs.500/-" },
@@ -179,8 +193,7 @@ const services: Service[] = [
   },
   {
     name: "THREADING",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: THREADING,
     prices: [
       { duration: "Eyebrow Threading", price: "Rs.100/-" },
       { duration: "Upper Lips", price: "Rs.80/-" },
@@ -191,8 +204,7 @@ const services: Service[] = [
   },
   {
     name: "MANICURE/PEDICURE",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: MANICURE,
     prices: [
       { duration: "Manicure", price: "Rs.1000/-" },
       { duration: "Pedicure", price: "Rs.1200/-" },
@@ -202,8 +214,7 @@ const services: Service[] = [
   },
   {
     name: "HENNA ARTS",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: HENNA,
     prices: [
       { duration: "Normal Application on Hand", price: "Rs.500/-" },
       { duration: "Normal Application on Feet", price: "Rs.500/-" },
@@ -214,25 +225,30 @@ const services: Service[] = [
   },
   {
     name: "HAIR WORKS",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-planetspapokhara-wixstudio-spapokhara-blank-2025-02-25-09_36_38.png-750I032MddLxjyXbrDxpotMdt6WT3D.jpeg",
+    image: HAIRWORKS,
     prices: [
       { duration: "Hair Shampoo & Dry", price: "Rs.500/-" },
       { duration: "Hair Treatment", price: "Rs.2000/-" },
       { duration: "Hair Spa", price: "Rs.2500/-" },
     ],
-    description: "Professional hair care services including treatments and styling.",
+    description:
+      "Professional hair care services including treatments and styling.",
   },
-]
+];
 
-const ServicesSection =()=> {
+const ServicesSection = () => {
   return (
     <div className="bg-[#f5e6e0] min-h-screen py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center mb-12 text-[#5d4037]">Services We Provide</h2>
+        <h2 className="text-3xl font-semibold text-center mb-12 text-[#5d4037]">
+          Services We Provide
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="bg-white/80 backdrop-blur-sm border-none shadow-lg">
+            <Card
+              key={index}
+              className="bg-white/80 backdrop-blur-sm border-none shadow-lg"
+            >
               <CardHeader>
                 <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
                   <img
@@ -241,14 +257,18 @@ const ServicesSection =()=> {
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <CardTitle className="text-lg font-medium text-center mt-4 text-[#5d4037]">{service.name}</CardTitle>
+                <CardTitle className="text-lg font-medium text-center mt-4 text-[#5d4037]">
+                  {service.name}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
                   {service.prices.map((price, idx) => (
                     <div key={idx} className="flex justify-between text-sm">
                       <span className="text-gray-600">{price.duration}</span>
-                      <span className="font-medium text-[#5d4037]">{price.price}</span>
+                      <span className="font-medium text-[#5d4037]">
+                        {price.price}
+                      </span>
                     </div>
                   ))}
                   <CardDescription className="mt-4 text-sm text-gray-600 leading-relaxed">
@@ -261,7 +281,7 @@ const ServicesSection =()=> {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ServicesSection;
