@@ -11,14 +11,14 @@ const Home = () => {
     <>
       <Helmet>
         {/* Primary Meta Tags */}
-        <title>Home - Planet Spa Pokhara</title>
+        <title>Home | Planet Spa Pokhara</title>
         <meta
           name="description"
           content="Discover the best luxury spa experience at Planet Spa Pokhara. Rejuvenate with our expert massages, beauty treatments, and holistic wellness therapies."
         />
         <meta
           name="keywords"
-          content="spa, wellness, relaxation, massage, luxury spa, Pokhara spa, body therapy, beauty treatments, stress relief, Ayurvedic massage, Himalayan spa"
+          content="spa in Nepal, Pokhara spa, Nepal wellness, luxury spa Nepal, best spa in Pokhara, massage in Pokhara, Ayurvedic spa Nepal, Himalayan wellness, relaxation therapy Nepal, Pokhara body massage, Nepal massage center, wellness retreat Nepal, full body massage Pokhara, stress relief spa, holistic healing Nepal, Pokhara beauty treatments, luxury massage Nepal, deep tissue massage Pokhara, Nepalese spa, traditional therapy Nepal, herbal spa Pokhara, rejuvenation center Nepal, hot stone massage Nepal, wellness center Pokhara, organic spa Nepal, therapeutic massage Nepal, professional spa services Nepal, relaxation spa Pokhara"
         />
         <meta name="author" content="Planet Spa Pokhara" />
         <meta name="robots" content="index, follow" />
@@ -38,7 +38,7 @@ const Home = () => {
         <meta property="og:url" content="https://planetspapokhara.com/" />
         <meta
           property="og:image"
-          content="https://planetspapokhara.com/assets/images/logo.png"
+          content="https://planetspapokhara.com/logo.png"
         />
         <meta property="og:site_name" content="Planet Spa Pokhara" />
 
@@ -54,7 +54,7 @@ const Home = () => {
         />
         <meta
           name="twitter:image"
-          content="https://planetspapokhara.com/assets/images/logo.png"
+          content="https://planetspapokhara.com/logo.png"
         />
 
         {/* JSON-LD Structured Data for SEO */}
@@ -64,12 +64,12 @@ const Home = () => {
             "@type": "LocalBusiness",
             name: "Planet Spa Pokhara",
             url: "https://planetspapokhara.com/",
-            image: "https://planetspapokhara.com/assets/images/logo.png",
+            image: "https://planetspapokhara.com/logo.png",
             description:
               "Planet Spa Pokhara offers luxury spa services including massages, wellness treatments, and beauty therapies in a serene environment.",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "Your Street Address",
+              streetAddress: "Pokhara-6, Lakeside",
               addressLocality: "Pokhara",
               addressRegion: "Gandaki",
               postalCode: "33700",
@@ -77,12 +77,12 @@ const Home = () => {
             },
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+977-XXXXXXXXXX",
+              telephone: "+977-98458323239",
               contactType: "customer service",
             },
             sameAs: [
-              "https://www.facebook.com/planetspapokhara",
-              "https://www.instagram.com/planetspapokhara",
+              "https://www.facebook.com/planetspa2024",
+              "https://www.instagram.com/spaplanet93/",
             ],
           })}
         </script>
