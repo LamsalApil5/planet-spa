@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState } from "react";
@@ -15,6 +16,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "../ui/checkbox";
+import emailjs from "emailjs-com";
+
 const treatments = [
   {
     name: "Shirodhara Treatment",
@@ -187,9 +190,61 @@ export default function BookingForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Submitted Form Data:", formData);
+
+    // Format treatments into a readable string
+    const selectedTreatments = Object.entries(formData.treatments)
+      .filter(([_, value]) => value) // Remove empty values
+      .map(([key, value]) => `${key}: ${value}`)
+      .join(", ");
+
+    // Template parameters
+    const templateParams = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      date: formData.date,
+      time: formData.time,
+      message: formData.message || "No message provided",
+      spaPackage: formData.spaPackage || "No package selected",
+      saunaSteam: formData.saunaSteam ? "Yes" : "No",
+      treatments: selectedTreatments || "No treatments selected",
+    };
+
+    try {
+      const result = await emailjs.send(
+        "service_p8dc2uw", // Your EmailJS service ID
+        "template_ii77fbp", // Your EmailJS template ID
+        templateParams,
+        "LangsvRS7yuFPYlWJ" // Your EmailJS public key
+      );
+
+      if (result.status === 200) {
+        alert("Booking email sent successfully");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          date: "",
+          time: "",
+          message: "",
+          spaPackage: "",
+          saunaSteam: false,
+          treatments: treatments.reduce((acc, treatment) => {
+            acc[treatment.key] = "";
+            return acc;
+          }, {} as { [key: string]: string }),
+        });
+      } else {
+        alert("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending booking email:", error);
+      alert("Error sending booking email. Please check your connection.");
+    }
   };
 
   return (
