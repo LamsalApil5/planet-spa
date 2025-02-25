@@ -1,0 +1,11 @@
+input,
+textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+}
+

@@ -3,17 +3,19 @@ const Footer = () => {
     <footer className="bg-gray-100 text-white py-6">
       <div className="container mx-auto flex flex-col items-center justify-center">
         <div className="text-center md:text-left flex flex-col items-center md:space-x-6 mt-4 md:mt-0">
-          <h1 className="text-2xl font-bold text-yellow-950">EXPERIENCES TO RELAX AND REVIBE</h1>
+          <h1 className="text-2xl font-bold text-yellow-950">
+            EXPERIENCES TO RELAX AND REVIBE
+          </h1>
           <p className="text-xl  text-yellow-950">AT PLANET SPA</p>
         </div>
-        <div className="flex flex-col md:flex-row items-end justify-start w-full">
-          <div className="flex items-center space-x-2">
+        <div className="flex flex-col md:flex-row items-start justify-start w-full">
+          <div className="flex items-center justify-start space-x-2 w-[50%] sm:w-[50%]">
             <svg
               preserveAspectRatio="xMidYMid meet"
               data-bbox="19.973 62.6 160.04 74.308"
               viewBox="19.973 62.6 160.04 74.308"
-              height="400"
-              width="600"
+              height="100%"
+              width="100%"
               xmlns="http://www.w3.org/2000/svg"
               data-type="color"
               role="presentation"
@@ -103,9 +105,25 @@ const Footer = () => {
               </g>
             </svg>
           </div>
-          <div className="md:mt-0 mb-32 flex space-x-16 items-end justify-end px-16">
-            <button className="bg-black text-white px-8 py-4 rounded">Facebook</button>
-            <button className="bg-black text-white px-8 py-4 rounded">Instagram</button>
+        </div>
+        <div className="flex flex-col md:flex-row items-end justify-end w-full">
+          <div className="md:mt-0 mb-8 mt-8 flex space-x-16 items-end justify-end px-16">
+            <button
+              className="bg-black text-white px-8 py-4 md:px-12 md:py-6 text-sm md:text-xl rounded hover:bg-green-950"
+              onClick={() =>
+                window.open("https://www.instagram.com/spaplanet93/", "_blank")
+              }
+            >
+              Instagram
+            </button>
+            <button
+              className="bg-black text-white px-8 py-4 md:px-12 md:py-6 text-sm md:text-xl rounded hover:bg-green-950"
+              onClick={() =>
+                window.open("https://www.facebook.com/planetspa2024", "_blank")
+              }
+            >
+              Facebook
+            </button>
           </div>
         </div>
       </div>

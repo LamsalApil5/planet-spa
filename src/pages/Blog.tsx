@@ -1,9 +1,14 @@
+import BestSpaSection from "@/components/blog/best-spa-section"
+import HeroSection from "@/components/blog/hero-section"
+import ServicesSection from "@/components/blog/services-section"
 
 const Blog = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-4">Working......</h1>
-    </div>
+    <>
+      <HeroSection/>
+      <BestSpaSection/>
+      <ServicesSection/>
+    </>
   )
 }
 

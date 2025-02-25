@@ -1,10 +1,15 @@
+import BookingForm from "@/components/book/booking-form";
+import Map from "@/components/home/Map";
+import HeroSection from "@/components/menu/HeroSection";
+
 const Book = () => {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-4">Working......</h1>
-      </div>
-    )
-  }
-  
-  export default Book
-  
+  return (
+    <>
+      <HeroSection />
+      <BookingForm />
+      <Map/>
+    </>
+  );
+};
+
+export default Book;
