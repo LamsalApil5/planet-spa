@@ -247,7 +247,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="bg-white/80 backdrop-blur-sm border-none shadow-lg"
+              className="backdrop-blur-sm border-none shadow-none"
             >
               <CardHeader>
                 <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
