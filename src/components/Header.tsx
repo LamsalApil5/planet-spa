@@ -54,14 +54,15 @@ const Header = () => {
               >
                 BOOK NOW
               </NavLink>
-              <NavLink
-                to="/whatsapp"
-                className={({ isActive }) =>
-                  isActive ? "text-green-800" : "hover:text-yellow-950"
-                }
+              <a
+                href="https://wa.me/+9779845832239"
+                className="hover:text-green-800 text-yellow-950"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 WHATSAPP
-              </NavLink>
+              </a>
+
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
@@ -79,22 +80,31 @@ const Header = () => {
                 BLOG
               </NavLink>
             </div>
-            <div className="flex justify-center" >
-              <div className="rounded-full text-white py-4 px-16 text-center" style={{backgroundColor:"rgb(118, 72, 58)"}}>
+            <div className="flex justify-center">
+              <div
+                className="rounded-full text-white py-4 px-16 text-center"
+                style={{ backgroundColor: "rgb(118, 72, 58)" }}
+              >
                 <h2 className="text-4xl ">20% Discount on Booking</h2>
               </div>
             </div>
           </div>
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-brown-700 focus:outline-none absolute top-16 right-4">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-brown-700 focus:outline-none absolute top-16 right-4"
+            >
               {isOpen ? <X size={28} /> : <Menu size={40} />}
             </button>
           </div>
-        </div>        
+        </div>
 
-         {/* Banner (Mobile View - Below Logo) */}
-         <div className="md:hidden flex justify-center mt-4">
-          <div className="rounded-full text-white py-4 px-8 text-center" style={{ backgroundColor: "rgb(118, 72, 58)" }}>
+        {/* Banner (Mobile View - Below Logo) */}
+        <div className="md:hidden flex justify-center mt-4">
+          <div
+            className="rounded-full text-white py-4 px-8 text-center"
+            style={{ backgroundColor: "rgb(118, 72, 58)" }}
+          >
             <h2 className="text-2xl">20% Discount on Booking</h2>
           </div>
         </div>
@@ -136,15 +146,14 @@ const Header = () => {
           >
             BOOK NOW
           </NavLink>
-          <NavLink
-            to="/whatsapp"
-            onClick={() => setIsOpen(false)}
-            className={({ isActive }) =>
-              isActive ? "text-green-800" : "hover:text-yellow-950"
-            }
+          <a
+            href="https://wa.me/+9779845832239"
+            className="hover:text-green-800 text-yellow-950"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             WHATSAPP
-          </NavLink>
+          </a>
           <NavLink
             to="/contact"
             onClick={() => setIsOpen(false)}
