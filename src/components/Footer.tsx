@@ -106,10 +106,10 @@ const Footer = () => {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-end justify-end w-full">
-          <div className="md:mt-0 mb-8 mt-8 flex space-x-16 items-end justify-end px-16">
+        <div className="flex flex-col items-center md:items-end w-full px-4 sm:px-8 md:px-16">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 md:space-x-8 mb-6 mt-6 w-full sm:w-auto">
             <button
-              className="bg-black text-white px-8 py-4 md:px-12 md:py-6 text-sm md:text-xl rounded hover:bg-green-950"
+              className="bg-black text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-sm sm:text-base md:text-lg rounded-md hover:bg-green-950 transition w-full sm:w-auto"
               onClick={() =>
                 window.open("https://www.instagram.com/spaplanet93/", "_blank")
               }
@@ -117,7 +117,7 @@ const Footer = () => {
               Instagram
             </button>
             <button
-              className="bg-black text-white px-8 py-4 md:px-12 md:py-6 text-sm md:text-xl rounded hover:bg-green-950"
+              className="bg-black text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-sm sm:text-base md:text-lg rounded-md hover:bg-green-950 transition w-full sm:w-auto"
               onClick={() =>
                 window.open("https://www.facebook.com/planetspa2024", "_blank")
               }

@@ -16,12 +16,18 @@ const Header = () => {
           {/* Logo */}
           <NavLink
             to="/"
-            className="flex justify-start items-center space-x-2 text-yellow-950"
+            className="flex items-center space-x-2 text-yellow-950"
           >
-            <img src={logo} alt="Planet Spa" className="w-36 h-36" />
-            <div>
-              <h1 className="text-4xl font- text-yellow-950">Planet Spa</h1>
-              <p className="text-lg italic text-yellow-950">
+            <img
+              src={logo}
+              alt="Planet Spa"
+              className="w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36"
+            />
+            <div className="text-center sm:text-left">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-950">
+                Planet Spa
+              </h1>
+              <p className="text-sm sm:text-lg italic text-yellow-950">
                 Escape To Paradise
               </p>
             </div>
