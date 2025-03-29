@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState } from "react";
@@ -6,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
@@ -17,8 +15,19 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "../ui/checkbox";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
-const treatments = [
+interface TreatmentOption {
+  value: string;
+  label: string;
+}
+
+interface Treatment {
+  name: string;
+  key: string;
+  options: TreatmentOption[];
+}
+const treatments: Treatment[] = [
   {
     name: "Shirodhara Treatment",
     key: "shirodharaTreatment",
@@ -38,14 +47,15 @@ const treatments = [
     ],
   },
   {
-    name: "Thai Massage",
-    key: "thaiMassage",
+    name: "Trekkers Massage",
+    key: "trekkersMassage",
     options: [
       { value: "60min", label: "60 min. Rs.5000/-" },
       { value: "90min", label: "90 min. Rs.7000/-" },
       { value: "120min", label: "120 min. Rs.8000/-" },
     ],
   },
+  
   {
     name: "Shiatsu Massage",
     key: "shiatsuMassage",
@@ -53,6 +63,15 @@ const treatments = [
       { value: "60min", label: "60 min. Rs.4000/-" },
       { value: "90min", label: "90 min. Rs.6000/-" },
       { value: "120min", label: "120 min. Rs.7500/-" },
+    ],
+  },
+  {
+    name: "Thai Massage",
+    key: "thaiMassage",
+    options: [
+      { value: "60min", label: "60 min. Rs.5000/-" },
+      { value: "90min", label: "90 min. Rs.7000/-" },
+      { value: "120min", label: "120 min. Rs.8000/-" },
     ],
   },
   {
@@ -65,12 +84,12 @@ const treatments = [
     ],
   },
   {
-    name: "Aroma Massage",
-    key: "aromaMassage",
+    name: "Swedish Massage",
+    key: "swedishMassage",
     options: [
-      { value: "60min", label: "60 min. Rs.4000/-" },
-      { value: "90min", label: "90 min. Rs.6000/-" },
-      { value: "120min", label: "120 min. Rs.7500/-" },
+      { value: "60min", label: "60 min. Rs.3500/-" },
+      { value: "90min", label: "90 min. Rs.5200/-" },
+      { value: "120min", label: "120 min. Rs.6500/-" },
     ],
   },
   {
@@ -80,6 +99,15 @@ const treatments = [
       { value: "60min", label: "60 min. Rs.3500/-" },
       { value: "90min", label: "90 min. Rs.5200/-" },
       { value: "120min", label: "120 min. Rs.6500/-" },
+    ],
+  },
+  {
+    name: "Aroma Massage",
+    key: "aromaMassage",
+    options: [
+      { value: "60min", label: "60 min. Rs.4000/-" },
+      { value: "90min", label: "90 min. Rs.6000/-" },
+      { value: "120min", label: "120 min. Rs.7500/-" },
     ],
   },
   {
@@ -152,6 +180,10 @@ interface FormData {
 }
 
 export default function BookingForm() {
+  const [selectedTreatments, setSelectedTreatments] = useState<{
+    [key: string]: string;
+  }>({});
+
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -180,24 +212,19 @@ export default function BookingForm() {
     }));
   };
 
-  const handleTreatmentChange = (key: string, value: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      treatments: {
-        ...prev.treatments,
-        [key]: value,
-      },
+  const handleTreatmentChange = (value: string, key: string) => {
+    setSelectedTreatments((prevSelected) => ({
+      ...prevSelected,
+      [key]: value, // Set the selected value for the specific key
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // Format treatments into a readable string
-    const selectedTreatments = Object.entries(formData.treatments)
-      .filter(([_, value]) => value) // Remove empty values
-      .map(([key, value]) => `${key}: ${value}`)
-      .join(", ");
+    const treatmentsString =
+      Object.entries(selectedTreatments)
+        .map(([key, value]) => `${key}: ${value}`) // Format each entry as "key: value"
+        .join(", ") || "No treatments selected";
 
     // Template parameters
     const templateParams = {
@@ -210,19 +237,20 @@ export default function BookingForm() {
       message: formData.message || "No message provided",
       spaPackage: formData.spaPackage || "No package selected",
       saunaSteam: formData.saunaSteam ? "Yes" : "No",
-      treatments: selectedTreatments || "No treatments selected",
+      treatments: treatmentsString || "No treatments selected",
     };
-
     try {
       const result = await emailjs.send(
-        "service_p8dc2uw", // Your EmailJS service ID
-        "template_ii77fbp", // Your EmailJS template ID
+        "service_a5iljwp", // Your EmailJS service ID
+        "template_5wjm84u", // Your EmailJS template ID
         templateParams,
-        "LangsvRS7yuFPYlWJ" // Your EmailJS public key
+        "dLYmxH-t0aDOlLqdh" // Your EmailJS public key
       );
 
+      // Check the result status
       if (result.status === 200) {
-        alert("Booking email sent successfully");
+        toast.success("Booking email sent successfully");
+        // Reset form data after successful email sending
         setFormData({
           firstName: "",
           lastName: "",
@@ -233,17 +261,14 @@ export default function BookingForm() {
           message: "",
           spaPackage: "",
           saunaSteam: false,
-          treatments: treatments.reduce((acc, treatment) => {
-            acc[treatment.key] = "";
-            return acc;
-          }, {} as { [key: string]: string }),
+          treatments: {}, // Reset treatments to an empty object
         });
       } else {
-        alert("Failed to send email. Please try again.");
+        toast.error("Failed to send email. Please try again.");
       }
     } catch (error) {
-      console.error("Error sending booking email:", error);
-      alert("Error sending booking email. Please check your connection.");
+      console.error("Error sending email:", error); // Log the error for debugging
+      toast.error("Error sending email. Please check your connection.");
     }
   };
 
@@ -372,9 +397,15 @@ export default function BookingForm() {
                     <SelectValue placeholder="Choose one" />
                   </SelectTrigger>
                   <SelectContent className="bg-white">
-                    <SelectItem value="basic">Basic Package</SelectItem>
-                    <SelectItem value="premium">Premium Package</SelectItem>
-                    <SelectItem value="luxury">Luxury Package</SelectItem>
+                    <SelectItem value="Half_Day_Package_4_Hours_Rs.10000">
+                      Half Day Package (4 Hours) - Rs. 10,000/-
+                    </SelectItem>
+                    <SelectItem value="Relaxation_Package_3_Hours_Rs.9000">
+                      Relaxation Package (3 Hours) - Rs. 9,000/-
+                    </SelectItem>
+                    <SelectItem value="Health_Package_3_Hours_Rs.8500">
+                      Health Package (3 Hours) - Rs. 8,500/-
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -384,16 +415,19 @@ export default function BookingForm() {
               {treatments.map(({ name, key, options }) => (
                 <div key={key} className="space-y-2">
                   <Label>{name}</Label>
-                  <RadioGroup
-                    onValueChange={(value) => handleTreatmentChange(value, key)}
-                  >
-                    {options.map(({ value, label }) => (
-                      <div key={value} className="flex items-center space-x-2">
-                        <RadioGroupItem value={value} id={`${key}-${value}`} />
-                        <Label htmlFor={`${key}-${value}`}>{label}</Label>
-                      </div>
-                    ))}
-                  </RadioGroup>
+                  {options.map(({ value, label }) => (
+                    <div key={value} className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        id={`${key}-${value}`}
+                        name={key} // Grouping radio buttons by key
+                        value={value}
+                        checked={selectedTreatments[key] === value} // Track selected value for the key
+                        onChange={() => handleTreatmentChange(value, key)} // Update selection
+                      />
+                      <Label htmlFor={`${key}-${value}`}>{label}</Label>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>

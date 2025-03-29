@@ -18,11 +18,11 @@ const Menu = () => {
         />
         <meta name="author" content="Planet Spa Pokhara" />
         <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://planetspapokhara.com/menu" />
+        <link rel="canonical" href="https://www.planetspapokhara.com/menu" />
 
         {/* Open Graph (OG) Meta Tags for Social Media */}
         <meta property="og:type" content="website" />
+        
         <meta
           property="og:title"
           content="Planet Spa Pokhara - Spa & Massage Menu"
@@ -31,10 +31,10 @@ const Menu = () => {
           property="og:description"
           content="Browse the luxurious menu of Planet Spa Pokhara, offering a range of massages, wellness treatments, and beauty therapies for relaxation and rejuvenation."
         />
-        <meta property="og:url" content="https://planetspapokhara.com/menu" />
+        <meta property="og:url" content="https://www.planetspapokhara.com/menu" />
         <meta
           property="og:image"
-          content="https://planetspapokhara.com/logo.png"
+          content="https://www.planetspapokhara.com/logo.png"
         />
         <meta property="og:site_name" content="Planet Spa Pokhara" />
 
@@ -50,7 +50,7 @@ const Menu = () => {
         />
         <meta
           name="twitter:image"
-          content="https://planetspapokhara.com/logo.png"
+          content="https://www.planetspapokhara.com/logo.svg"
         />
 
         {/* JSON-LD Structured Data for SEO */}
@@ -59,8 +59,8 @@ const Menu = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Planet Spa Pokhara",
-            url: "https://planetspapokhara.com/menu",
-            image: "https://planetspapokhara.com/logo.png",
+            url: "https://www.planetspapokhara.com/menu",
+            image: "https://www.planetspapokhara.com/logo.png",
             description:
               "Discover the Planet Spa Pokhara menu with premium spa services, massages, and beauty treatments for complete relaxation and well-being.",
             address: {

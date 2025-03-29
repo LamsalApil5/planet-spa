@@ -9,15 +9,15 @@ const Testimonials = () => {
   const data: Testimonial[] = [
     {
       text: "Had a wonderful experience at Planet Spa! The atmosphere was calming, and the staff was friendly and professional. We got deep tissue massage and it was so good! My masseuse was so nice , she asked me if I was comfortable enough. The facilities were clean and well-kept. I highly recommend it for anyone looking to unwind and relax !",
-      author: "Joshua Terringer",
+      author: "Icchya Tamrakar",
     },
     {
       text: "Visited this place for a foot massage and it was really a nice experience.The whole team is very professional and dedicated. Most importantly the cleanliness of the place is commendable. Most of the places here in pokhara is unhygienic and not maintained well. Hope to visit again. Highly recommend for their professional service and reasonable pricing.",
-      author: "Brian K.N",
+      author: "Binoy K N",
     },
     {
       text: `I got the foot massage, hot stone massage and steam/sauna package. <br/> The massages were great! The steam/sauna was good.<br/> I liked that I could put the amount of water that I wanted on the stones in the sauna. I didn't like that the steam had constant steam pumping it out. It was intense!`,
-      author: "Alex Dale",
+      author: "Alex Dela",
     },
   ];
 

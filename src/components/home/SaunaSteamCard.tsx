@@ -3,7 +3,7 @@ import woman from "../../assets/Images/girl_relaxing.png";
 
 const SaunaSteamCard = () => {
   return (
-    <div className="relative flex flex-col md:flex-row gap-4 bg-white p-4 rounded-2xl shadow-lg">
+    <div className="relative flex flex-col md:flex-row gap-4 bg-white p-4 rounded-2xl">
       {/* Left Section (Sauna Content + Woman Image) */}
       <div className="w-full md:w-1/2 flex flex-col gap-4">
         {/* Sauna Content (50% Height) */}

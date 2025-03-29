@@ -60,14 +60,14 @@ const Header = () => {
               >
                 BOOK NOW
               </NavLink>
-              <a
-                href="https://wa.me/+9779845832239"
-                className="hover:text-green-800 text-yellow-950"
-                target="_blank"
-                rel="noopener noreferrer"
+              <NavLink
+                to="/gallery"
+                className={({ isActive }) =>
+                  isActive ? "text-green-800" : "hover:text-yellow-950"
+                }
               >
-                WHATSAPP
-              </a>
+                GALLERY
+              </NavLink>
 
               <NavLink
                 to="/contact"

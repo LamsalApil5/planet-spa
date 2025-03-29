@@ -42,6 +42,12 @@ const services = [
       "Relax and unwind with a Hot Stone Massage at Planet Spa. Our expert therapists use heated stones to soothe muscle tension, improve circulation, and promote deep relaxation.",
     image: service6,
   },
+  {
+    title: "Relax and Refresh at Planet Spa",
+    description:
+      "Take a break from your busy life and relax at Planet Spa, Pokhara. Enjoy a soothing massage, a warm sauna, or a refreshing facial in a peaceful setting. Our skilled therapists will help you feel relaxed and refreshed. Book your session today and experience the best spa in Pokhara!",
+    image: service6,
+  },
 ];
 const ServicesSection = () => {
   return (

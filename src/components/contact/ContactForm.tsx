@@ -3,6 +3,8 @@
 import type React from "react";
 
 import { useState } from "react";
+import { toast } from "react-toastify";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -12,9 +14,42 @@ const ContactForm = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+
+    // EmailJS template parameters
+    const templateParams = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      message: formData.message || "No message provided",
+    };
+
+    try {
+      const result = await emailjs.send(
+        "service_a5iljwp", // Your EmailJS service ID
+        "template_sj18lpk", // Your EmailJS template ID
+        templateParams,
+        "dLYmxH-t0aDOlLqdh" // Your EmailJS public key
+      );
+
+      if (result.status === 200) {
+        toast.success("Email sent successfully!");
+
+        // Reset form data after successful submission
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        toast.error("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Error sending email. Please check your connection.");
+    }
   };
 
   return (
@@ -27,9 +62,9 @@ const ContactForm = () => {
       <div className="grid md:grid-cols-2 gap-x-20">
         {/* Contact Information */}
         <div className="space-y-6 mb-12 md:mb-0">
-          <p className="text-xl font-light">spaplanet93@gmail.com</p>
+          <p className="text-xl font-light">Planetspapokhara@gmail.com</p>
           <div className="space-y-1">
-            <p className="text-xl font-light">Phone. +97798458323239,</p>
+            <p className="text-xl font-light">Phone. +9779845832239,</p>
             <p className="text-xl font-light">9804914524</p>
           </div>
           <p className="text-xl font-light">Pokhara-6, lakeside (NEPAL)</p>

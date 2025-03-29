@@ -23,6 +23,7 @@ import THREADING from "../../assets/Images/Services/eyebrow-threading.png";
 import MANICURE from "../../assets/Images/Services/Manicure-Pedicure.png";
 import HENNA from "../../assets/Images/Services/HeenaArts.png";
 import HAIRWORKS from "../../assets/Images/Services/woman-washing-head-hairsalon.png";
+import SHIATSU from "../../assets/Images/Services/Shiatsu.png";
 
 interface ServicePrice {
   duration: string;
@@ -57,7 +58,7 @@ const services: Service[] = [
       { duration: "120min", price: "Rs.8000/-" },
     ],
     description:
-      "A full body massage using heat with a traditional basalt stones strategically placed over energy points.",
+      "A hot stone massage may begin with a traditional Swedish massage technique to prepare your muscles then place the warm stones on key acupressure points.",
   },
   {
     name: "TREKKERS MASSAGE",
@@ -65,16 +66,27 @@ const services: Service[] = [
     prices: [
       { duration: "60 min", price: "Rs.5000/-" },
       { duration: "90min", price: "Rs.7000/-" },
+      { duration: "120min", price: "Rs.8000/-" },
+    ],
+    description:
+      "Mixture of different massages like Thai massage for stretching, Swedish massage for strokes and vibration and shiatsu for opening knots and releasing toxins.",
+  },
+  {
+    name: "SHIATSU MASSAGE",
+    image: SHIATSU,
+    prices: [
+      { duration: "60 min", price: "Rs.4000/-" },
+      { duration: "90min", price: "Rs.6000/-" },
       { duration: "120min", price: "Rs.7500/-" },
     ],
     description:
-      "Mixture of different massages like Thai massage for stretching, Swedish massage for relaxation and deep tissue for muscle pain.",
+      "Massage with Fingers, Thumb, Elbow, knuckle, Feet and Palms; Acupressure, Assisted, Stretching, Joint manipulation and mobilization.",
   },
   {
     name: "THAI MASSAGE",
     image: thaiMassage,
     prices: [
-      { duration: "45 min", price: "Rs.4000/-" },
+      { duration: "60 min", price: "Rs.5000/-" },
       { duration: "90min", price: "Rs.7000/-" },
       { duration: "120min", price: "Rs.8000/-" },
     ],
@@ -85,7 +97,7 @@ const services: Service[] = [
     name: "DEEP TISSUE MASSAGE",
     image: deepMassage,
     prices: [
-      { duration: "45 min", price: "Rs.4500/-" },
+      { duration: "60 min", price: "Rs.4000/-" },
       { duration: "90min", price: "Rs.6000/-" },
       { duration: "120min", price: "Rs.7500/-" },
     ],
@@ -96,12 +108,12 @@ const services: Service[] = [
     name: "AYURVEDIC MASSAGE",
     image: ayurvedic,
     prices: [
-      { duration: "60 min", price: "Rs.5000/-" },
-      { duration: "90min", price: "Rs.6500/-" },
-      { duration: "120min", price: "Rs.8500/-" },
+      { duration: "60 min", price: "Rs.3500/-" },
+      { duration: "90min", price: "Rs.5200/-" },
+      { duration: "120min", price: "Rs.6500/-" },
     ],
     description:
-      "Traditional massage designed to promote overall wellness and balance using herbal oils, focused on marma points and muscle pain.",
+      "These service is designed to promote overall wellness and reduce stress, tension and muscles pain.",
   },
   {
     name: "AROMA MASSAGE",
@@ -112,57 +124,57 @@ const services: Service[] = [
       { duration: "120min", price: "Rs.7500/-" },
     ],
     description:
-      "Therapeutic massage using essential oils, combining Swedish style long strokes with healing touch through scent and touch.",
+      "Uses essential oils for relaxation, stress relief and enhancing overall well-being through scent and touch.",
   },
   {
     name: "SWEDISH MASSAGE",
     image: swedishMassage,
     prices: [
-      { duration: "60 min", price: "Rs.5000/-" },
-      { duration: "90min", price: "Rs.6500/-" },
-      { duration: "120min", price: "Rs.8500/-" },
+      { duration: "60 min", price: "Rs.3500/-" },
+      { duration: "90min", price: "Rs.5200/-" },
+      { duration: "120min", price: "Rs.6500/-" },
     ],
     description:
-      "Classic massage technique that uses long strokes, kneading and circular movements to help relax and energize the body.",
+      "Massage technique that uses long strokes, kneading and circular movements to help relax and energize the body.",
   },
   {
     name: "BODY SCRUB",
     image: bodyscrub,
     prices: [
       { duration: "45 min", price: "Rs.3000/-" },
-      { duration: "60min", price: "Rs.3500/-" },
+      { duration: "60min", price: "Rs.4000/-" },
     ],
     description:
-      "Body spa treatment using natural scrub which helps to reveal young healthy looking skin.",
+      "Scrub will cleanse away old, dull & dead skin cells to reveal young healthy looking skin.",
   },
   {
     name: "FOOT REFLEXOLOGY",
     image: footReflexalogy,
     prices: [
-      { duration: "30 min", price: "Rs.1500/-" },
-      { duration: "45min", price: "Rs.2500/-" },
+      { duration: "30 min", price: "Rs.1800/-" },
+      { duration: "45min", price: "Rs.2600/-" },
       { duration: "60min", price: "Rs.3500/-" },
     ],
     description:
-      "Applied pressure to specific points in feet that correspond to different body organs, relieving stress and improving blood circulation.",
+      "Applies pressure to specific points on feet to promote relaxation, alleviate pain, and improve overall well-being.",
   },
   {
     name: "HEAD, NECK & SHOULDER",
     image: headNeck,
     prices: [
       { duration: "30 min", price: "Rs.1800/-" },
-      { duration: "45min", price: "Rs.2500/-" },
+      { duration: "45min", price: "Rs.2600/-" },
       { duration: "60min", price: "Rs.3500/-" },
     ],
     description:
-      "Express treatment to target tense areas around head, neck and shoulders through gentle manipulation.",
+      "Targets tension in upper body, relieving stress and promoting relaxation through gentle manipulation.",
   },
   {
     name: "SPINAL BACK MASSAGE",
     image: spinalBack,
     prices: [
-      { duration: "25 min", price: "Rs.1800/-" },
-      { duration: "45min", price: "Rs.2500/-" },
+      { duration: "30 min", price: "Rs.1800/-" },
+      { duration: "45min", price: "Rs.2600/-" },
       { duration: "60min", price: "Rs.3500/-" },
     ],
     description:
@@ -173,66 +185,65 @@ const services: Service[] = [
     image: FACIAL,
     prices: [
       { duration: "Face Cleansing", price: "Rs.1000/-" },
-      { duration: "Face Clean Up", price: "Rs.1500/-" },
-      { duration: "Whitening Facial", price: "Rs.2000/-" },
-      { duration: "Normal Gold Facial", price: "Rs.2500/-" },
+      { duration: "Fruits Glow Facial ", price: "Rs.2000/-" },
+      { duration: "Glorious Golden Facial", price: "Rs.2500/-" },
+      { duration: "Dimond Glow Facial", price: "Rs.3000/-" },
     ],
-    description:
-      "Various facial treatments to cleanse, exfoliate and nourish the skin.",
+    description: "",
   },
   {
     name: "WAXING",
     image: WAXING,
     prices: [
-      { duration: "Full Arms", price: "Rs.800/-" },
-      { duration: "Half Arms", price: "Rs.500/-" },
-      { duration: "Full Legs", price: "Rs.1000/-" },
-      { duration: "Half Legs", price: "Rs.600/-" },
+      { duration: "Armpit Waxing", price: "Rs.1000/-" },
+      { duration: "Hand Waxing", price: "Rs.1800/-" },
+      { duration: "Half Leg Waxing ", price: "Rs.2200/-" },
+      { duration: "Full Leg Waxing ", price: "Rs.3000/-" },
+      { duration: "Bikini Waxing ", price: "Rs.3000/-" },
+      { duration: "Full Body Waxing ", price: "Rs.8500/-" },
     ],
-    description: "Professional waxing services for smooth, hair-free skin.",
+    description: "",
   },
   {
     name: "THREADING",
     image: THREADING,
     prices: [
-      { duration: "Eyebrow Threading", price: "Rs.100/-" },
-      { duration: "Upper Lips", price: "Rs.80/-" },
-      { duration: "Chin Threading", price: "Rs.100/-" },
-      { duration: "Full Face Threading", price: "Rs.300/-" },
+      { duration: "Eyebrow Threading", price: "Rs.300/-" },
+      { duration: "Upper Lips Threading ", price: "Rs.200/-" },
+      { duration: "Chin Threading", price: "Rs.200/-" },
+      { duration: "Full Face Threading", price: "Rs.500/-" },
     ],
-    description: "Precise hair removal technique using cotton thread.",
+    description: "",
   },
   {
     name: "MANICURE/PEDICURE",
     image: MANICURE,
     prices: [
-      { duration: "Manicure", price: "Rs.1000/-" },
-      { duration: "Pedicure", price: "Rs.1200/-" },
-      { duration: "Nail Polish", price: "Rs.300/-" },
+      { duration: "Manicure", price: "Rs.2200/-" },
+      { duration: "Pedicure", price: "Rs.2500/-" },
+      { duration: "Nail Polish", price: "Rs.500/-" },
     ],
-    description: "Professional nail care services for hands and feet.",
+    description: "",
   },
   {
     name: "HENNA ARTS",
     image: HENNA,
     prices: [
-      { duration: "Normal Application on Hand", price: "Rs.500/-" },
-      { duration: "Normal Application on Feet", price: "Rs.500/-" },
-      { duration: "Bridal Application on Hand", price: "Rs.2000/-" },
-      { duration: "Special Application for Hand & Feet", price: "Rs.3000/-" },
+      { duration: "Mehandi Application On Hand", price: "Rs.2000/-" },
+      { duration: "Mehandi Application On Feet", price: "Rs.3000/-" },
+      { duration: "Mehandi Application On Hand  & Feet  ", price: "Rs.4500/-" },
     ],
-    description: "Traditional henna application with intricate designs.",
+    description: "",
   },
   {
     name: "HAIR WORKS",
     image: HAIRWORKS,
     prices: [
-      { duration: "Hair Shampoo & Dry", price: "Rs.500/-" },
-      { duration: "Hair Treatment", price: "Rs.2000/-" },
-      { duration: "Hair Spa", price: "Rs.2500/-" },
+      { duration: "Hair Shampoo & Dry", price: "Rs.1500/-" },
+      { duration: "Hair Treatment", price: "Rs.3000/-" },
+      { duration: "Hair Oil Massage", price: "Rs.3000/-" },
     ],
-    description:
-      "Professional hair care services including treatments and styling.",
+    description: "",
   },
 ];
 

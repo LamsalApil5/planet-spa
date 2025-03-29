@@ -19,8 +19,7 @@ const Book = () => {
         />
         <meta name="author" content="Planet Spa Pokhara" />
         <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://planetspapokhara.com/book" />
+        <link rel="canonical" href="https://www.planetspapokhara.com/book" />
 
         {/* Open Graph (OG) Meta Tags for Social Media */}
         <meta property="og:type" content="website" />
@@ -32,10 +31,10 @@ const Book = () => {
           property="og:description"
           content="Easily book a spa session at Planet Spa Pokhara. Enjoy expert massages, relaxation therapies, and beauty treatments in a luxurious environment."
         />
-        <meta property="og:url" content="https://planetspapokhara.com/book" />
+        <meta property="og:url" content="https://www.planetspapokhara.com/book" />
         <meta
           property="og:image"
-          content="https://planetspapokhara.com/logo.png"
+          content="https://www.planetspapokhara.com/logo.png"
         />
         <meta property="og:site_name" content="Planet Spa Pokhara" />
 
@@ -51,7 +50,7 @@ const Book = () => {
         />
         <meta
           name="twitter:image"
-          content="https://planetspapokhara.com/logo.png"
+          content="https://www.planetspapokhara.com/logo.svg"
         />
 
         {/* JSON-LD Structured Data for SEO */}
@@ -60,8 +59,8 @@ const Book = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Planet Spa Pokhara",
-            url: "https://planetspapokhara.com/book",
-            image: "https://planetspapokhara.com/logo.png",
+            url: "https://www.planetspapokhara.com/book",
+            image: "https://www.planetspapokhara.com/logo.svg",
             description:
               "Book an appointment at Planet Spa Pokhara for expert spa treatments, massages, and wellness therapies in a serene setting.",
             address: {

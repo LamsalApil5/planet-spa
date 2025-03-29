@@ -21,8 +21,8 @@ const packages: Package[] = [
   {
     title: "Relaxation Package",
     duration: "(3 Hours)",
-    price: "Rs. 6000/-",
-    description: "Ayurvedic Oil Swedish Massage, Shirodhara, Steam/Sauna",
+    price: "Rs. 9000/-",
+    description: "Ayurvedic Or Swedish Massage, Shirodhara, Sauna/Steam",
     image: service2,
   },
   {
