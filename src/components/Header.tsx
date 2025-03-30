@@ -154,6 +154,7 @@ const Header = () => {
           </NavLink>
           <NavLink
             to="/gallery"
+            onClick={() => setIsOpen(false)}
             className={({ isActive }) =>
               isActive ? "text-green-800" : "hover:text-yellow-950"
             }
