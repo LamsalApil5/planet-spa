@@ -23,7 +23,7 @@ const Home = () => {
         
         <meta name="author" content="Planet Spa Pokhara" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.planetspapokhara.com/" />
+        <link rel="canonical" href="https://planetspapokhara.com/" />
 
         {/* Open Graph (OG) Meta Tags for Social Media */}
         <meta property="og:type" content="website" />
@@ -35,10 +35,10 @@ const Home = () => {
           property="og:description"
           content="Relax and rejuvenate at Planet Spa Pokhara with our premium spa treatments, massages, and beauty services in a tranquil setting."
         />
-        <meta property="og:url" content="https://www.planetspapokhara.com/" />
+        <meta property="og:url" content="https://planetspapokhara.com/" />
         <meta
           property="og:image"
-          content="https://www.planetspapokhara.com/logo.png"
+          content="https://planetspapokhara.com/logo.png"
         />
         <meta property="og:site_name" content="Planet Spa Pokhara" />
 
@@ -54,7 +54,7 @@ const Home = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.planetspapokhara.com/logo.svg"
+          content="https://planetspapokhara.com/logo.svg"
         />
 
         {/* JSON-LD Structured Data for SEO */}
@@ -63,8 +63,8 @@ const Home = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Planet Spa Pokhara",
-            url: "https://www.planetspapokhara.com/",
-            image: "https://www.planetspapokhara.com/logo.svg",
+            url: "https://planetspapokhara.com/",
+            image: "https://planetspapokhara.com/logo.svg",
             description:
               "Planet Spa Pokhara offers luxury spa services including massages, wellness treatments, and beauty therapies in a serene environment.",
             address: {

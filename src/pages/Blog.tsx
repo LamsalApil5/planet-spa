@@ -20,7 +20,7 @@ const Blog = () => {
         />
         <meta name="author" content="Planet Spa Pokhara" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.planetspapokhara.com/blog" />
+        <link rel="canonical" href="https://planetspapokhara.com/blog" />
 
         {/* Open Graph (OG) Meta Tags for Social Media */}
         <meta property="og:type" content="website" />
@@ -29,10 +29,10 @@ const Blog = () => {
           property="og:description"
           content="Discover expert insights on spa treatments, wellness tips, and relaxation techniques from Planet Spa Pokhara. Elevate your self-care routine with our blog."
         />
-        <meta property="og:url" content="https://www.planetspapokhara.com/blog" />
+        <meta property="og:url" content="https://planetspapokhara.com/blog" />
         <meta
           property="og:image"
-          content="https://www.planetspapokhara.com/logo.png"
+          content="https://planetspapokhara.com/logo.png"
         />
         <meta property="og:site_name" content="Planet Spa Pokhara" />
 
@@ -48,7 +48,7 @@ const Blog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.planetspapokhara.com/logo.svg"
+          content="https://planetspapokhara.com/logo.svg"
         />
 
         {/* JSON-LD Structured Data for SEO */}
@@ -57,8 +57,8 @@ const Blog = () => {
             "@context": "https://schema.org",
             "@type": "Blog",
             name: "Planet Spa Pokhara Blog",
-            url: "https://www.planetspapokhara.com/blog",
-            image: "https://www.planetspapokhara.com/logo.svg",
+            url: "https://planetspapokhara.com/blog",
+            image: "https://planetspapokhara.com/logo.svg",
             description:
               "Read the latest wellness and relaxation insights from Planet Spa Pokhara. Explore massage techniques, Ayurvedic healing, and self-care practices.",
             publisher: {
@@ -66,12 +66,12 @@ const Blog = () => {
               name: "Planet Spa Pokhara",
               logo: {
                 "@type": "ImageObject",
-                url: "https://www.planetspapokhara.com/logo.svg",
+                url: "https://planetspapokhara.com/logo.svg",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": "https://www.planetspapokhara.com/blog",
+              "@id": "https://planetspapokhara.com/blog",
             },
           })}
         </script>
